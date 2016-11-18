@@ -6,7 +6,7 @@ module Shoppe
     
     def self.setup
       Shoppe::Order.before_confirmation do
-        Shoppe::NotificationMailer.order_received(self).deliver_now
+        Shoppe::NotificationMailer.order_received(self).deliver
       end
     end
 
